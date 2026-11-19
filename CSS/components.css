@@ -1,0 +1,89 @@
+/* ========================================
+   DETALHES DECORATIVOS
+======================================== */
+
+.section:not(.hero)::before {
+    content: "✧";
+    position: absolute;
+    top: 75px;
+    right: 12%;
+    color: rgba(197, 139, 155, 0.35);
+    font-family: var(--font-title);
+    font-size: 27px;
+}
+
+.section:not(.hero)::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    right: calc(12% + 35px);
+    width: 45px;
+    height: 1px;
+    background: rgba(197, 139, 155, 0.25);
+}
+
+.education-card,
+.skill-card,
+.interest-card {
+    cursor: default;
+}
+
+.education-card,
+.skill-card,
+.interest-card,
+.image-frame,
+.primary-button,
+.header-button,
+.back-to-top {
+    will-change: transform;
+}
+
+.hero-image-area::after {
+    content: "❧";
+    position: absolute;
+    top: 45%;
+    right: -65px;
+    color: rgba(197, 139, 155, 0.25);
+    font-size: 55px;
+    transform: rotate(20deg);
+    pointer-events: none;
+}
+
+.education-card:hover .education-number {
+    color: var(--rose);
+    transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-icon,
+.interest-card:hover .interest-symbol {
+    transform: rotate(8deg) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-icon,
+.interest-symbol {
+    transition: transform 0.3s ease;
+}
+
+/* Linha decorativa nos títulos */
+
+.section-heading h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 55px;
+    height: 1px;
+    background: var(--burgundy);
+}
+
+.header.header-scrolled {
+    background: rgba(10, 5, 8, 0.96);
+    border-bottom-color: rgba(197, 139, 155, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
